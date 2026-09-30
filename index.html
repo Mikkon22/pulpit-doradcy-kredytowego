@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moje wnioski — pulpit doradcy kredytowego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell" id="shell">
+    <main class="table-pane">
+      <div class="page-head">
+        <div class="page-heading">
+          <h1 class="page-title">Moje wnioski</h1>
+          <p class="sort-note" id="sort-note"></p>
+        </div>
+        <div class="search">
+          <input id="search" type="search" placeholder="Szukaj klienta" aria-label="Szukaj klienta">
+        </div>
+      </div>
+
+      <div class="table" role="table" aria-label="Lista wniosków">
+        <div class="table-header" role="row">
+          <button class="col col-name th" type="button" data-sort="name" role="columnheader">
+            <span>Dane</span><img class="chev" src="assets/chevron-down.svg" alt="">
+          </button>
+          <button class="col col-stage th" type="button" data-sort="stage" role="columnheader">
+            <span>Etap</span><img class="chev" src="assets/chevron-down.svg" alt="">
+          </button>
+          <button class="col col-time th" type="button" data-sort="time" role="columnheader">
+            <span>Czas etapu</span><img class="chev" src="assets/chevron-down.svg" alt="">
+          </button>
+          <button class="col col-problem th" type="button" data-sort="problem" role="columnheader">
+            <span>Problem</span><img class="chev" src="assets/chevron-down.svg" alt="">
+          </button>
+        </div>
+        <div id="rows"></div>
+        <p id="empty" class="empty" hidden>Brak wniosków spełniających kryteria wyszukiwania.</p>
+      </div>
+    </main>
+
+    <aside class="sidebar" id="sidebar" aria-label="Szybki podgląd wniosku" aria-hidden="true"></aside>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
