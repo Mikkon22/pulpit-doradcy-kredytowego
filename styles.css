@@ -128,6 +128,12 @@ body {
 }
 
 .table {
+  /* flex: none jest tu konieczne. Jako element flexa w kolumnie tabela miałaby
+     domyślnie flex-shrink: 1, więc przy niższym oknie kurczyłaby się zamiast
+     zachować swoją wysokość — a że overflow ma hidden (zaokrąglone rogi),
+     nadmiarowe wiersze zostałyby ucięte bez możliwości doscrollowania.
+     Z flex: none tabela zachowuje pełną wysokość, a przewija się panel. */
+  flex: none;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);

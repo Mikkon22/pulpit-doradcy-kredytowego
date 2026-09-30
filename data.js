@@ -324,7 +324,7 @@ const APPLICATIONS = [
     name: 'Magdalena Szymańska',
     amount: 410000,
     stage: 2,
-    hoursInStage: 30,
+    hoursInStage: 24,
     problem: 'data',
     phone: '+48 574 190 833',
     email: 'm.szymanska@example.com',
